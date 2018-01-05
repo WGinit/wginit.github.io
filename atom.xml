@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wginit.github.io/"/>
-  <updated>2018-01-05T07:25:50.151Z</updated>
+  <updated>2018-01-05T08:44:21.704Z</updated>
   <id>http://wginit.github.io/</id>
   
   <author>
@@ -17,42 +17,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://wginit.github.io/2018/01/05/article-title/"/>
-    <id>http://wginit.github.io/2018/01/05/article-title/</id>
-    <published>2018-01-05T07:20:04.983Z</published>
-    <updated>2018-01-05T07:25:50.151Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="白山羊博客开篇"><a href="#白山羊博客开篇" class="headerlink" title="白山羊博客开篇"></a>白山羊博客开篇</h2><p><strong>白山羊</strong> 博客全新改版.</p><h3 id="Built-exclusively-for-Markdown"><a href="#Built-exclusively-for-Markdown" class="headerlink" title="Built exclusively for Markdown"></a>Built exclusively for Markdown</h3><p>Enjoy first-class Markdown support with easy access to  Markdown syntax and convenient keyboard shortcuts.</p><p>Give them a try:</p><ul><li><strong>Bold</strong> (<code>Ctrl+B</code>) and <em>Italic</em> (<code>Ctrl+I</code>)</li><li>Quotes (<code>Ctrl+Q</code>)</li><li>Code blocks (<code>Ctrl+K</code>)</li><li>Headings 1, 2, 3 (<code>Ctrl+1</code>, <code>Ctrl+2</code>, <code>Ctrl+3</code>)</li><li>Lists (<code>Ctrl+U</code> and <code>Ctrl+Shift+O</code>)</li></ul><h3 id="See-your-changes-instantly-with-LivePreview"><a href="#See-your-changes-instantly-with-LivePreview" class="headerlink" title="See your changes instantly with LivePreview"></a>See your changes instantly with LivePreview</h3><p>Don’t guess if your <a href="http://markdownpad.com" target="_blank" rel="noopener">hyperlink syntax</a> is correct; LivePreview will show you exactly what your document looks like every time you press a key.</p><h3 id="Make-it-your-own"><a href="#Make-it-your-own" class="headerlink" title="Make it your own"></a>Make it your own</h3><p>Fonts, color schemes, layouts and stylesheets are all 100% customizable so you can turn MarkdownPad into your perfect editor.</p><h3 id="A-robust-editor-for-advanced-Markdown-users"><a href="#A-robust-editor-for-advanced-Markdown-users" class="headerlink" title="A robust editor for advanced Markdown users"></a>A robust editor for advanced Markdown users</h3><p>MarkdownPad supports multiple Markdown processing engines, including standard Markdown, Markdown Extra (with Table support) and GitHub Flavored Markdown.</p><p>With a tabbed document interface, PDF export, a built-in image uploader, session management, spell check, auto-save, syntax highlighting and a built-in CSS management interface, there’s no limit to what you can do with MarkdownPad.</p>]]></content>
+    <title>白山羊博客遗址</title>
+    <link href="http://wginit.github.io/2018/01/05/%E7%99%BD%E5%B1%B1%E7%BE%8A%E5%8D%9A%E5%AE%A2%E9%81%97%E5%9D%80/"/>
+    <id>http://wginit.github.io/2018/01/05/白山羊博客遗址/</id>
+    <published>2018-01-05T08:44:21.000Z</published>
+    <updated>2018-01-05T08:44:21.704Z</updated>
     
     <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;白山羊博客开篇&quot;&gt;&lt;a href=&quot;#白山羊博客开篇&quot; class=&quot;headerlink&quot; title=&quot;白山羊博客开篇&quot;&gt;&lt;/a&gt;白山羊博客开篇&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;白山羊&lt;/strong&gt; 博客全新改版.&lt;/p&gt;
-&lt;h3 id=&quot;Built-exc
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://wginit.github.io/2018/01/05/hello-world/"/>
-    <id>http://wginit.github.io/2018/01/05/hello-world/</id>
-    <published>2018-01-05T07:12:32.695Z</published>
-    <updated>2018-01-05T07:12:32.695Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
     
     </summary>
     
