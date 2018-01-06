@@ -1,8 +1,8 @@
 <!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> axios发送Post、Get请求封装 · 白山羊博客|异途的垦荒者</title><meta name="description" content="axios发送Post、Get请求封装 - Wginit"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.jpg"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://wginit.github.io/atom.xml" title="白山羊博客|异途的垦荒者"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.jpg" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">首页</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">列表</a></li><li class="nav-list-item"><a href="https://weibo.com/drydingrui" target="_blank" class="nav-list-link">微博</a></li><li class="nav-list-item"><a href="https://github.com/wginit" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="http:lihua1108.com" target="_self" class="nav-list-link">旧站</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">axios发送Post、Get请求封装</h1><div class="post-info">2018年1月6日</div><div class="post-content"><p>vue更新到2.0之后，作者就宣告不再对vue-resource更新，而是推荐的axios。对于习惯resource的不是不能用它，只是它的性能和安全性都不如axios，两者好比XP和Win7+。</p>
 <h2 id="axios-简介"><a href="#axios-简介" class="headerlink" title="axios 简介"></a>axios 简介</h2><p>axios 是一个基于Promise 用于浏览器和 nodejs 的 HTTP 客户端，它本身具有以下特征：</p>
 <blockquote>
+<p>*从浏览器中创建 XMLHttpRequest</p>
 <ul>
-<li>从浏览器中创建 XMLHttpRequest</li>
 <li>从 node.js 发出 http 请求</li>
 <li>支持 Promise API</li>
 <li>拦截请求和响应</li>
@@ -23,7 +23,8 @@
 </blockquote>
 <p>引用 cdn:</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/axios/dist/axios.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="axios-提供以下7种请求方式"><a href="#axios-提供以下7种请求方式" class="headerlink" title="axios 提供以下7种请求方式"></a>axios 提供以下7种请求方式</h2><ol>
+<h2 id="axios-提供以下7种请求方式"><a href="#axios-提供以下7种请求方式" class="headerlink" title="axios 提供以下7种请求方式"></a>axios 提供以下7种请求方式</h2><blockquote>
+<ol>
 <li><p>axios.request(config)</p>
 </li>
 <li><p>axios.get(url[, config])</p>
@@ -39,6 +40,7 @@
 <li><p>axios.patch(url[, data[, config]])</p>
 </li>
 </ol>
+</blockquote>
 <p>这里主要介绍我们常用到的Get和Post请求。</p>
 <h2 id="axios-Post和Get请求封装成axios-js"><a href="#axios-Post和Get请求封装成axios-js" class="headerlink" title="axios Post和Get请求封装成axios.js"></a>axios Post和Get请求封装成axios.js</h2><pre><code>import conf from &apos;./conf&apos;;
 
