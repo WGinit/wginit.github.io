@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wginit.github.io/"/>
-  <updated>2018-01-05T09:38:38.982Z</updated>
+  <updated>2018-01-06T06:26:12.017Z</updated>
   <id>http://wginit.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://wginit.github.io/2018/01/05/%E5%A4%A7%E5%AE%B6%E5%A5%BD%EF%BC%8C%E7%99%BD%E5%B1%B1%E7%BE%8A%E5%8D%9A%E5%AE%A2%E5%BF%AB%E4%B8%80%E5%91%A8%E5%B2%81%E4%BA%86/"/>
     <id>http://wginit.github.io/2018/01/05/大家好，白山羊博客快一周岁了/</id>
     <published>2018-01-05T09:35:34.000Z</published>
-    <updated>2018-01-05T09:38:38.982Z</updated>
+    <updated>2018-01-06T06:26:12.017Z</updated>
     
-    <content type="html"><![CDATA[<p>白山羊博客现在已一周岁了，一路跌跌爬爬，慢慢积累，已有上千访问量了。总体感觉还不错吧。<br>随着前端技术日新月异的发展，旧版的博客以不堪入目zz，所以今年想换了主题，采用了大家普遍用的hexo来搭的博客。</p><h2 id="白山羊博客2017访问量-http-lihua1108-com"><a href="#白山羊博客2017访问量-http-lihua1108-com" class="headerlink" title="白山羊博客2017访问量(http://lihua1108.com)"></a>白山羊博客2017访问量(<a href="http://lihua1108.com" target="_blank" rel="noopener">http://lihua1108.com</a>)</h2><p><img src="https://raw.githubusercontent.com/WGinit/Assets/master/1.jpg" alt="https://raw.githubusercontent.com/WGinit/Assets/master/1.jpg"></p><p>360搜索排名均在首屏（统计：2018-1-5）：<br><img src="https://raw.githubusercontent.com/WGinit/Assets/master/2.jpg" alt="https://raw.githubusercontent.com/WGinit/Assets/master/2.jpg"><br><img src="https://raw.githubusercontent.com/WGinit/Assets/master/3.jpg" alt="https://raw.githubusercontent.com/WGinit/Assets/master/3.jpg"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p> 从刚结束的2017年，我主要学习了：</p><blockquote><ul><li>框架</li><li>nodeJS</li><li>Vue+vuex+vux+vue-router+axios+mockjs</li><li>打包工具</li><li>webpack 打包旧网站</li><li>gulp 打包多页面</li><li>微信公众号开发及H5页面开发 </li><li>IE7+的低版本兼容</li></ul></blockquote><p>##后话<br>本网站以后多做开源项目demo展示，主要博客文章依旧会在旧网站上展示。</p>]]></content>
+    <content type="html"><![CDATA[<p>白山羊博客现在已一周岁了，一路跌跌爬爬，慢慢积累，已有上千访问量了。总体感觉还不错吧。<br>随着前端技术日新月异的发展，旧版的博客以不堪入目zz，所以今年想换了主题，采用了大家普遍用的hexo来搭的博客。</p><h2 id="白山羊博客2017访问量-http-lihua1108-com-统计：2018-1-5"><a href="#白山羊博客2017访问量-http-lihua1108-com-统计：2018-1-5" class="headerlink" title="白山羊博客2017访问量(http://lihua1108.com,统计：2018-1-5)"></a>白山羊博客2017访问量(<a href="http://lihua1108.com,统计：2018-1-5" target="_blank" rel="noopener">http://lihua1108.com,统计：2018-1-5</a>)</h2><p><img src="https://raw.githubusercontent.com/WGinit/Assets/master/1.jpg" alt="https://raw.githubusercontent.com/WGinit/Assets/master/1.jpg"></p><p>360搜索排名均在首屏：<br><img src="https://raw.githubusercontent.com/WGinit/Assets/master/2.jpg" alt="https://raw.githubusercontent.com/WGinit/Assets/master/2.jpg"><br><img src="https://raw.githubusercontent.com/WGinit/Assets/master/3.jpg" alt="https://raw.githubusercontent.com/WGinit/Assets/master/3.jpg"></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p> 从刚结束的2017年，我主要学习了：</p><blockquote><ul><li>框架</li><li>nodeJS</li><li>Vue+vuex+vux+vue-router+axios+mockjs</li><li>打包工具</li><li>webpack 打包旧网站</li><li>gulp 打包多页面</li><li>微信公众号开发及H5页面开发 </li><li>IE7+的低版本兼容</li></ul></blockquote><p>##后话<br>本网站以后多做开源项目demo展示，主要博客文章依旧会在旧网站上展示。</p>]]></content>
     
     <summary type="html">
     
