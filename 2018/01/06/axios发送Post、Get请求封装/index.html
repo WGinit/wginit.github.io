@@ -23,15 +23,22 @@
 </blockquote>
 <p>引用 cdn:</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/axios/dist/axios.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="axios-提供以下7种请求方式"><a href="#axios-提供以下7种请求方式" class="headerlink" title="axios 提供以下7种请求方式"></a>axios 提供以下7种请求方式</h2><blockquote>
-<p>axios.request(config)</p>
-<p>axios.get(url[, config])</p>
-<p>axios.delete(url[, config])</p>
-<p>axios.head(url[, config])</p>
-<p>axios.post(url[, data[, config]])</p>
-<p>axios.put(url[, data[, config]])</p>
-<p>axios.patch(url[, data[, config]])</p>
-</blockquote>
+<h2 id="axios-提供以下7种请求方式"><a href="#axios-提供以下7种请求方式" class="headerlink" title="axios 提供以下7种请求方式"></a>axios 提供以下7种请求方式</h2><ol>
+<li><p>axios.request(config)</p>
+</li>
+<li><p>axios.get(url[, config])</p>
+</li>
+<li><p>axios.delete(url[, config])</p>
+</li>
+<li><p>axios.head(url[, config])</p>
+</li>
+<li><p>axios.post(url[, data[, config]])</p>
+</li>
+<li><p>axios.put(url[, data[, config]])</p>
+</li>
+<li><p>axios.patch(url[, data[, config]])</p>
+</li>
+</ol>
 <p>这里主要介绍我们常用到的Get和Post请求。</p>
 <h2 id="axios-Post和Get请求封装成axios-js"><a href="#axios-Post和Get请求封装成axios-js" class="headerlink" title="axios Post和Get请求封装成axios.js"></a>axios Post和Get请求封装成axios.js</h2><pre><code>import conf from &apos;./conf&apos;;
 
