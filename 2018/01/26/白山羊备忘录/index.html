@@ -1,0 +1,256 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge, chrome=1"><title> '白山羊备忘录' · 白山羊博客|异途的垦荒者</title><meta name="description" content="'白山羊备忘录' - Wginit"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.jpg"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://wginit.github.io/atom.xml" title="白山羊博客|异途的垦荒者"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.jpg" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">首页</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">列表</a></li><li class="nav-list-item"><a href="https://weibo.com/drydingrui" target="_blank" class="nav-list-link">微博</a></li><li class="nav-list-item"><a href="https://github.com/wginit" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="http:lihua1108.com" target="_self" class="nav-list-link">旧站</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">'白山羊备忘录'</h1><div class="post-info">2018年1月26日</div><div class="post-content"><h1 id="撸一个会话备忘录的小程序"><a href="#撸一个会话备忘录的小程序" class="headerlink" title="撸一个会话备忘录的小程序"></a>撸一个会话备忘录的小程序</h1><h4 id="说明：-数据在本地缓存中操作，纯前端无后台，不用担心信息泄露问题"><a href="#说明：-数据在本地缓存中操作，纯前端无后台，不用担心信息泄露问题" class="headerlink" title="说明： 数据在本地缓存中操作，纯前端无后台，不用担心信息泄露问题"></a>说明： 数据在本地缓存中操作，纯前端无后台，不用担心信息泄露问题</h4><h2 id="实现步骤（个人版）："><a href="#实现步骤（个人版）：" class="headerlink" title="实现步骤（个人版）："></a>实现步骤（个人版）：</h2><h3 id="1、注册微信小程序，获取appid"><a href="#1、注册微信小程序，获取appid" class="headerlink" title="1、注册微信小程序，获取appid"></a>1、注册微信小程序，获取appid</h3><blockquote>
+<p>注册网址： <a href="https://mp.weixin.qq.com" target="_blank" rel="noopener">https://mp.weixin.qq.com</a></p>
+</blockquote>
+<h3 id="2、下载新版微信开发者工具，新建备忘录项目，填写appid，确定后自动生成初始化代码"><a href="#2、下载新版微信开发者工具，新建备忘录项目，填写appid，确定后自动生成初始化代码" class="headerlink" title="2、下载新版微信开发者工具，新建备忘录项目，填写appid，确定后自动生成初始化代码"></a>2、下载新版微信开发者工具，新建备忘录项目，填写appid，确定后自动生成初始化代码</h3><blockquote>
+<p>开发者工具下载： <a href="https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html" target="_blank" rel="noopener">https://mp.weixin.qq.com/debug/wxadoc/dev/devtools/download.html</a></p>
+</blockquote>
+<h3 id="3、目录结构"><a href="#3、目录结构" class="headerlink" title="3、目录结构"></a>3、目录结构</h3><pre><code>+-- assets          //静态文件夹
+|   +-- font        //字体文件
+|       +-- iconfont.eot
+|          +-- iconfont.svg
+|          +-- iconfont.ttf
+|          +-- iconfont.woff  
+|    +-- images
+|        +-- share.jpg
++-- pages              //页面
+|    +-- add              //添加备忘录
+|   +-- add.js
+|        +-- add.json 
+|        +-- add.wxml
+|        +-- add.wxss
+|    +-- edit            //编辑备忘录
+|   +-- edit.js
+|        +-- edit.json 
+|        +-- edit.wxml
+|        +-- edit.wxss
+|    +-- index          //首页
+|   +-- index.js
+|        +-- index.json 
+|        +-- index.wxml
+|        +-- index.wxss
+|    +-- logs            //日志
+|   +-- logs.js
+|        +-- logs.json 
+|        +-- logs.wxml
+|        +-- logs.wxss
++-- utils        //公用js
+|   +-- shareData.js    //分享短句
+|   +-- util.js
++-- app.js
++-- app.json
++-- app.wxss
++-- project.config.json
+</code></pre><h3 id="4、功能模块"><a href="#4、功能模块" class="headerlink" title="4、功能模块"></a>4、功能模块</h3><blockquote>
+<p>备忘录添加</p>
+</blockquote>
+<pre><code>//保存标题、内容和编辑时间到storage中
+saveMemo: function(){
+  var that = this;
+  var stamp = +new Date();  //获取时间戳
+  var time = util.format(stamp);  // 转换成标准时间格式
+  var title = that.data.title;
+  var memo_value = that.data.value;
+
+  if (title == &apos;&apos;){
+    wx.showToast({
+      title: &apos;请输入标题&apos;,
+      icon: &apos;none&apos;,
+      duration: 1000
+    })
+  }
+  // else if (memo_value == &apos;&apos; ){
+  //   wx.showToast({
+  //     title: &apos;请输入内容&apos;,
+  //     icon: &apos;none&apos;,
+  //     duration: 1000
+  //   })
+  // }
+  else{
+    //后编辑的放在前面
+    that.data.memoLists.unshift({ &quot;title&quot;: title, &quot;text&quot;: memo_value, &quot;time&quot;: time });
+    //异步保存到storage中
+    try {
+      wx.setStorageSync(&apos;memoLists&apos;, that.data.memoLists)
+    } catch (e) {
+      wx.showToast({
+        title: &apos;保存失败&apos;,
+        icon: &apos;error&apos;,
+        duration: 2000
+      })
+    }
+    wx.redirectTo({
+      url: &apos;/pages/index/index&apos;
+    })
+
+  }
+},
+</code></pre><blockquote>
+<p>数据获取</p>
+</blockquote>
+<pre><code>var that = this;
+//异步获取storage中保存的数组
+try {
+  var value = wx.getStorageSync(&apos;memoLists&apos;);
+  if (value) {
+    that.data.memoLists.push(value)
+    that.setData({
+      memoLists: that.data.memoLists,
+      allLength: util.count(that.data.memoLists[0]),
+      isNull: false
+    })
+  }
+} catch (e) {
+  wx.showToast({
+    title: &apos;获取数据失败&apos;,
+    icon: &apos;none&apos;,
+    duration: 1500
+  })
+};
+</code></pre><blockquote>
+<p>数据编辑</p>
+</blockquote>
+<pre><code>//编辑备忘录后重新保存 
+  saveMemo: function () {
+    var that = this;
+    var stamp = +new Date();  //获取时间戳
+    var time = util.format(stamp);  // 转换成标准时间格式
+    var title = that.data.title;
+    var memo_value = that.data.value;
+    var editMemo = that.data.memoLists[that.data.id];
+
+    //标题不能为空
+    if (title == &apos;&apos;) {
+      wx.showToast({
+        title: &apos;请输入标题&apos;,
+        icon: &apos;none&apos;,
+        duration: 800
+      })
+    }
+    // else if (memo_value == &apos;&apos;) {
+    //   wx.showToast({
+    //     title: &apos;请输入内容&apos;,
+    //     icon: &apos;none&apos;,
+    //     duration: 800
+    //   })
+    // }
+    else {
+      //如果标题和内容都没改，编辑时间不变，否则时间更改
+      if(editMemo.title != title || editMemo.text != memo_value){
+        editMemo.time = time;
+      }else{
+        editMemo.time = that.data.time;
+      }
+
+      //更新标题和内容
+      editMemo.title = title;
+      editMemo.text = memo_value;
+
+      //异步更新数组
+      try {
+        wx.setStorageSync(&apos;memoLists&apos;, that.data.memoLists);
+        wx.redirectTo({
+          url: &apos;/pages/index/index&apos;
+        })
+      } catch (e) {
+        wx.showToast({
+          title: &apos;保存失败&apos;,
+          icon: &apos;error&apos;,
+          duration: 2000
+        })
+      }
+    }
+  },
+</code></pre><blockquote>
+<p>数据删除</p>
+</blockquote>
+<pre><code>// 删除单条备忘记录
+ delMemoLists: function(e) {
+   var that = this;
+     try {
+       wx.showModal({
+         title: &apos;&apos;,
+         content: &apos;确认删除这&apos; + that.data.checkboxLength+&apos;条吗?&apos;,
+         success: function (res) {
+           if (res.confirm) {
+               try {
+                 var delValue = wx.getStorageSync(&apos;delLists&apos;);
+                 // 数组从大到小排序
+                 delValue.sort(function (a, b) {
+                   return a &lt; b;
+                 })
+
+                 if (delValue) {
+                   if (that.data.allLength == that.data.checkboxLength) {
+                     //直接清空缓存
+                     wx.removeStorage({
+                           key: &apos;memoLists&apos;
+                      });  
+                   }else{
+                   for(var i=0; i&lt;delValue.length; i++){
+                       try {
+                         that.data.memoLists[0].splice(delValue[i] - 1, 1);   //删除指定下标的值
+                         wx.setStorageSync(&apos;memoLists&apos;, that.data.memoLists[0]);   //异步更新列表缓存
+                         wx.showToast({
+                           title: &apos;删除成功&apos;,
+                           icon: &apos;success&apos;,
+                           duration: 500
+                         });
+                       } catch (e) { }
+                     }
+                   }
+                   // 删除后刷新页面
+                   setTimeout(function () {
+                     wx.redirectTo({
+                       url: &apos;/pages/index/index&apos;
+                     });
+                   }, 500);
+
+                 } else {
+                   wx.showToast({
+                     title: &apos;获取数据失败&apos;,
+                     icon: &apos;none&apos;,
+                     duration: 1000
+                   });
+                 }
+               } catch (e) {
+                 wx.showToast({
+                   title: &apos;删除失败&apos;,
+                   icon: &apos;none&apos;,
+                   duration: 1500
+                 })
+               }
+             }
+           } 
+       })
+
+     } catch (e) {
+       wx.showToast({
+         title: &apos;删除失败&apos;,
+         icon: &apos;none&apos;,
+         duration: 1500
+       })
+     }
+ }
+</code></pre><blockquote>
+<p>分享功能</p>
+</blockquote>
+<pre><code>const shareData = require(&apos;../../utils/shareData.js&apos;)   //引入自定义分享标题
+// 分享
+  onShareAppMessage: function (res) {
+
+    return {
+      title: shareData[Math.round(Math.random() * (shareData.length - 1))],  //从数据中随机备选一条
+      path: &apos;/pages/index/index&apos;,
+      imageUrl: &apos;../../assets/images/share.jpg&apos;,
+      success: function (res) {
+        console.log(&apos;已转发&apos;)
+      },
+      fail: function (res) {
+        console.log(&apos;用户取消转发&apos;)
+      }
+    }
+  }
+</code></pre><h3 id="实现界面图"><a href="#实现界面图" class="headerlink" title="实现界面图"></a>实现界面图</h3><p><img src="https://raw.githubusercontent.com/WGinit/Assets/master/images/memo/1.jpg" alt="白山羊备忘录" title="白山羊备忘录"><br><img src="https://raw.githubusercontent.com/WGinit/Assets/master/images/memo/2.jpg" alt="白山羊备忘录" title="白山羊备忘录"><br><img src="https://raw.githubusercontent.com/WGinit/Assets/master/images/memo/4.jpg" alt="白山羊备忘录" title="白山羊备忘录"><br><img src="https://raw.githubusercontent.com/WGinit/Assets/master/images/memo/7.jpg" alt="白山羊备忘录" title="白山羊备忘录"></p>
+<h3 id="github地址："><a href="#github地址：" class="headerlink" title="github地址："></a>github地址：</h3><pre><code>https://github.com/WGinit/Memo
+</code></pre><p>觉得好的，给个star巴拉巴拉^_^</p>
+</div></article></div></main><footer><div class="paginator"><a href="/2018/01/09/2018前端发展趋势/" class="next">下一篇</a></div><div class="copyright"><p>© 2018 <a href="http://wginit.github.io">白山羊博客</a></p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script></body></html>
