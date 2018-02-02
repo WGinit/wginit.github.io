@@ -2,9 +2,149 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wginit.github.io/project/vue-pages/views/index.html</loc>
+    
+    <lastmod>2018-02-02T08:28:24.429Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wginit.github.io/readme.html</loc>
+    
+    <lastmod>2018-02-02T03:31:52.594Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wginit.github.io/project/memo/readme.html</loc>
     
     <lastmod>2018-01-30T03:38:14.810Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wginit.github.io/project/vue-pages/views/tools/bigimage.html</loc>
+    
+    <lastmod>2018-01-29T08:33:54.725Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wginit.github.io/project/vue-pages/views/tools/vuefilter.html</loc>
+    
+    <lastmod>2018-01-29T08:33:54.725Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wginit.github.io/project/vue-pages/views/home/list.html</loc>
+    
+    <lastmod>2018-01-29T08:33:54.713Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wginit.github.io/project/vue-pages/views/recruit/recruit.html</loc>
+    
+    <lastmod>2018-01-29T08:33:54.713Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wginit.github.io/project/vue-pages/views/vuxDemo/calendar.html</loc>
+    
+    <lastmod>2018-01-29T08:33:54.713Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wginit.github.io/project/vue-pages/views/home/home.html</loc>
+    
+    <lastmod>2018-01-29T08:33:54.713Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wginit.github.io/project/vue-pages/views/home/search.html</loc>
+    
+    <lastmod>2018-01-29T08:33:54.713Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wginit.github.io/project/vue-pages/views/iconfont/list.html</loc>
+    
+    <lastmod>2018-01-29T08:33:54.713Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wginit.github.io/project/vue-pages/views/vuxDemo/alert.html</loc>
+    
+    <lastmod>2018-01-29T08:33:54.713Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wginit.github.io/project/vue-pages/views/home/information.html</loc>
+    
+    <lastmod>2018-01-29T08:33:54.713Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wginit.github.io/project/vue-pages/views/vuxDemo/button.html</loc>
+    
+    <lastmod>2018-01-29T08:33:54.713Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wginit.github.io/project/vue-pages/views/tools/ajax.html</loc>
+    
+    <lastmod>2018-01-29T08:33:54.713Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wginit.github.io/project/vue-pages/views/user/user.html</loc>
+    
+    <lastmod>2018-01-29T08:33:54.713Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wginit.github.io/project/vue-pages/views/tools/getQuery.html</loc>
+    
+    <lastmod>2018-01-29T08:33:54.713Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wginit.github.io/project/vue-pages/views/member/member.html</loc>
+    
+    <lastmod>2018-01-29T08:33:54.713Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wginit.github.io/project/vue-pages/views/router/details.html</loc>
+    
+    <lastmod>2018-01-29T08:33:54.713Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wginit.github.io/project/vue-pages/views/message/message.html</loc>
+    
+    <lastmod>2018-01-29T08:33:54.713Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wginit.github.io/project/vue-pages/views/course/course.html</loc>
+    
+    <lastmod>2018-01-29T08:33:54.712Z</lastmod>
     
   </url>
   
@@ -33,6 +173,13 @@
     <loc>http://wginit.github.io/2018/01/05/%E5%A4%A7%E5%AE%B6%E5%A5%BD%EF%BC%8C%E7%99%BD%E5%B1%B1%E7%BE%8A%E5%8D%9A%E5%AE%A2%E5%BF%AB%E4%B8%80%E5%91%A8%E5%B2%81%E4%BA%86/</loc>
     
     <lastmod>2018-01-06T06:36:56.507Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wginit.github.io/project/vue-pages/views/member/aa.html</loc>
+    
+    <lastmod>2017-12-28T09:59:58.670Z</lastmod>
     
   </url>
   
